@@ -1,0 +1,11 @@
+{
+  "name": "itrg-zl-sso",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Static prototype of the Info-Tech CIO Analytics dashboard with a Zluri SaaS Management Platform page bolted into the side nav.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "npm run build && npx --yes serve public -l 4050"
+  }
+}
