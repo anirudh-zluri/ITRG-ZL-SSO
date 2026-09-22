@@ -1,0 +1,105 @@
+<nav class="z-nav">
+  <img class="z-nav__logo" src="assets/zluri/zluri.svg" alt="Zluri">
+  <div class="z-nav__right">
+    <span class="z-nav__partner">Signed in via Info-Tech Research Group</span>
+    <span class="z-avatar" aria-hidden="true">AM</span>
+  </div>
+</nav>
+<hr class="z-rule">
+
+<div class="steps__div2">
+  <div class="steps__div2__d1" data-step-counter>Step 1 of 3</div>
+  <hr class="z-rule z-rule--flush">
+
+  <!-- ---------- step 1 ---------- -->
+  <div class="steps__child1" data-step="1">
+    <div class="steps__child1__d1">Add Your Company Details</div>
+    <div class="steps__child__form">
+      <label class="steps__labelform" for="company-name">Company Name</label>
+      <input class="steps__controlform" id="company-name" type="text" placeholder="Ex: ABC Marketing or ABC Co" value="Northwind Manufacturing">
+
+      <label class="steps__labelform" for="fiscal-start">Financial Year Starts In</label>
+      <select class="steps__controlform" id="fiscal-start">
+        <option>January</option><option>February</option><option>March</option>
+        <option selected>April</option><option>May</option><option>June</option>
+        <option>July</option><option>August</option><option>September</option>
+        <option>October</option><option>November</option><option>December</option>
+      </select>
+
+      <label class="steps__labelform" for="currency">Default Currency</label>
+      <select class="steps__controlform" id="currency">
+        <option selected>USD — US Dollar</option>
+        <option>CAD — Canadian Dollar</option>
+        <option>GBP — Pound Sterling</option>
+        <option>EUR — Euro</option>
+      </select>
+    </div>
+    <div class="steps__actions">
+      <button class="z-btn NextButton" type="button" data-next>Next</button>
+    </div>
+  </div>
+
+  <!-- ---------- step 2 ---------- -->
+  <div class="steps__child2" data-step="2" hidden>
+    <div class="steps__child1__d1">Add Your Team to Zluri</div>
+    <div class="steps__child2__d2">Connect with one of the following services to add your team to Zluri</div>
+    <p class="steps__secure">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width="11" height="11" aria-hidden="true"><path d="M12 6V4.8a4 4 0 1 0-8 0V6H2.8v8.4h10.4V6H12ZM5.4 4.8a2.6 2.6 0 1 1 5.2 0V6H5.4V4.8Z"/></svg>
+      Your data security is a priority for Zluri. Please read our privacy policy &amp; terms of service for more information
+    </p>
+    <div class="steps__child2__d3">
+      <div class="steps__cards">
+        <button class="steps__child2__box" type="button" aria-pressed="true">
+          <img class="steps__child2__box__tick" src="assets/zluri/checked.svg" alt="">
+          <img src="assets/zluri/gsuite.svg" alt=""><span>Google Workspace</span>
+        </button>
+        <button class="steps__child2__box" type="button" aria-pressed="false">
+          <img class="steps__child2__box__tick" src="assets/zluri/checked.svg" alt="">
+          <img src="assets/zluri/okta.svg" alt=""><span>Okta</span>
+        </button>
+        <button class="steps__child2__box" type="button" aria-pressed="false">
+          <img class="steps__child2__box__tick" src="assets/zluri/checked.svg" alt="">
+          <img src="assets/zluri/actdir.svg" alt=""><span>Active Directory</span>
+        </button>
+        <button class="steps__child2__box" type="button" aria-pressed="false">
+          <img class="steps__child2__box__tick" src="assets/zluri/checked.svg" alt="">
+          <img src="assets/zluri/saml.svg" alt=""><span>SAML SSO</span>
+        </button>
+      </div>
+    </div>
+    <div class="steps__actions">
+      <button class="z-btn NextButton" type="button" data-next>Next</button>
+      <button class="z-btn z-btn--link" type="button" data-next>Skip for now</button>
+    </div>
+  </div>
+
+  <!-- ---------- step 3 ---------- -->
+  <div class="steps__child2" data-step="3" hidden>
+    <div class="steps__child1__d1">Add transactions</div>
+    <div class="steps__child2__d2">Connect your finance system so Zluri can match spend to applications</div>
+    <p class="steps__secure">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width="11" height="11" aria-hidden="true"><path d="M12 6V4.8a4 4 0 1 0-8 0V6H2.8v8.4h10.4V6H12ZM5.4 4.8a2.6 2.6 0 1 1 5.2 0V6H5.4V4.8Z"/></svg>
+      Your data security is a priority for Zluri. Please read our privacy policy &amp; terms of service for more information
+    </p>
+    <div class="steps__child2__d3">
+      <div class="steps__cards">
+        <button class="steps__child2__box" type="button" aria-pressed="false">
+          <img class="steps__child2__box__tick" src="assets/zluri/checked.svg" alt="">
+          <img src="assets/zluri/quickbooks.svg" alt=""><span>QuickBooks</span>
+        </button>
+        <button class="steps__child2__box" type="button" aria-pressed="false">
+          <img class="steps__child2__box__tick" src="assets/zluri/checked.svg" alt="">
+          <img src="assets/zluri/netsuite.svg" alt=""><span>NetSuite</span>
+        </button>
+        <button class="steps__child2__box" type="button" aria-pressed="false">
+          <img class="steps__child2__box__tick" src="assets/zluri/checked.svg" alt="">
+          <img src="assets/zluri/csv.svg" alt=""><span>Upload CSV</span>
+        </button>
+      </div>
+    </div>
+    <div class="steps__actions">
+      <a class="z-btn NextButton" href="zluri-overview.html">Finish setup</a>
+      <a class="z-btn z-btn--link" href="zluri.html">Back to Info-Tech</a>
+    </div>
+  </div>
+</div>

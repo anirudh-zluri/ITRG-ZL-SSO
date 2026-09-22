@@ -1,0 +1,117 @@
+/* Prototype-only styles. Everything here follows the CIO Analytics design tokens:
+   primary #1a75d3, grey-200 #dadada, grey-600 #606060, Exo (accent) / Montserrat (display). */
+
+/* The vendored dashboard CSS masks the hexagon badge with an absolute path we don't ship. */
+.hexagon-rounded {
+  -webkit-mask-image: url('shapes/hexagon.svg');
+  mask-image: url('shapes/hexagon.svg');
+}
+
+/* ---- demo mode toggle ---- */
+.proto-toggle {
+  display: inline-flex;
+  padding: 3px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+.proto-toggle button {
+  font-family: Exo, ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  padding: 0.5rem 0.875rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.proto-toggle button:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+.proto-toggle button[aria-pressed='true'] {
+  background: #fff;
+  color: #1a75d3;
+}
+
+/* ---- chart wells ---- */
+.proto-chart {
+  width: 100%;
+  height: 300px;
+}
+.proto-chart-tall {
+  height: 340px;
+}
+
+/* ---- the big handoff button ---- */
+.proto-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  font-family: Exo, ui-sans-serif, system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  background: #1a75d3;
+  border: 1px solid #1a75d3;
+  border-radius: 6px;
+  padding: 0.875rem 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+.proto-cta:hover,
+.proto-cta:focus-visible {
+  background: #135ca8;
+  border-color: #135ca8;
+  color: #fff;
+  box-shadow: 0 8px 16.5px rgba(0, 0, 0, 0.15);
+}
+.proto-cta--lg {
+  font-size: 1.125rem;
+  padding: 1.125rem 2.25rem;
+}
+
+/* ---- first-day panel ---- */
+.proto-firstday {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+  padding: 4rem 1.5rem;
+}
+.proto-firstday__kicker {
+  font-family: Exo, ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1a75d3;
+}
+.proto-firstday__title {
+  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #08233f;
+  margin: 0;
+}
+.proto-firstday__body {
+  max-width: 34rem;
+  font-family: Roboto, ui-sans-serif, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #606060;
+  margin: 0;
+}
+.proto-note {
+  font-family: Roboto, ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.8125rem;
+  color: #6b6b6b;
+}
