@@ -88,6 +88,6 @@ Highcharts 12.1.2, the same library the real dashboard ships.
 - Charts on the CIO Analytics home page are the saved snapshot. Their `turbo-frame src` attributes
   were stripped, otherwise Turbo re-fetches from the live site, hits the login wall and blanks them.
 - Every other Info-Tech nav link still points at `us.app.cioanalytics.ai`. Only **Metrics** (home)
-  and **Zluri's SaaS Management Platform** (its own SAAS MANAGEMENT section, below Service Desk) stay local.
+  and **Zluri's SaaS Management Platform** (its own IT GOVERNANCE section, below Service Desk) stay local.
 - `logo-infotech.jpg` was missing from the saved copy, so the sidebar logo falls back to
   `info-tech-logo-blue-a9dd7c97.svg`.
