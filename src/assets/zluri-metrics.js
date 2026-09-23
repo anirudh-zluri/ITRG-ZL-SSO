@@ -9,7 +9,8 @@
   var DATA = {
     apps: [212, 219, 224, 231, 236, 241, 247, 251, 256, 259, 264, 268],
     users: [1840, 1872, 1905, 1948, 1990, 2031, 2074, 2118, 2162, 2211, 2264, 2310],
-    requests: [118, 149, 187, 232, 271, 318, 364, 412, 455, 512, 578, 641],
+    // $k per month, same series as ACTUAL SPEND PER MONTH on the Zluri overview
+    spend: [268, 274, 281, 296, 302, 311, 318, 324, 331, 338, 346, 352],
     // cumulative, so it only ever goes up
     savings: [18, 41, 69, 102, 138, 177, 219, 258, 301, 340, 377, 412],
   };
@@ -68,10 +69,11 @@
       },
     },
     {
-      id: 'chart-requests',
+      id: 'chart-spend',
       options: {
-        series: [{ type: 'spline', name: 'Access requests automated', data: DATA.requests, color: '#ff8835' }],
-        tooltip: { pointFormat: '<b>{point.y} requests</b> fulfilled without a ticket' },
+        series: [{ type: 'column', name: 'Spend tracked', data: DATA.spend, color: '#ff8835', borderRadius: 3, pointPadding: 0.12, groupPadding: 0.1 }],
+        yAxis: { labels: { format: '${value}k' } },
+        tooltip: { pointFormat: '<b>${point.y}k</b> tracked this month' },
       },
     },
     {
@@ -108,6 +110,12 @@
     document.querySelectorAll('.proto-toggle button').forEach(function (btn) {
       btn.setAttribute('aria-pressed', String(btn.dataset.mode === mode));
     });
+    var cta = document.getElementById('hero-cta');
+    if (cta) {
+      var firstDay = mode === 'first-day';
+      cta.href = firstDay ? 'zluri-onboarding.html' : 'zluri-overview.html';
+      cta.querySelector('[data-cta-label]').textContent = firstDay ? 'Access Zluri' : 'Open Zluri';
+    }
     try {
       localStorage.setItem('itrg-zluri-mode', mode);
     } catch (e) {

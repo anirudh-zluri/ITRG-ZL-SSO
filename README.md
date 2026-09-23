@@ -32,7 +32,8 @@ badges over `file://`, so the badges vanish. Everything else works either way.
            └── /zluri-overview     Zluri overview, dropped in directly, no login
 ```
 
-The **First day / Regular day** switch is the toggle in the top-right of the `/zluri` hero.
+The **First day / Regular day** switch floats in the bottom-right of `/zluri` (that page only).
+The white button in the hero follows it: "Access Zluri" to the wizard, or "Open Zluri" to the overview.
 It remembers your last choice in `localStorage`, so a demo picks up where you left it.
 
 ## Layout
@@ -87,6 +88,6 @@ Highcharts 12.1.2, the same library the real dashboard ships.
 - Charts on the CIO Analytics home page are the saved snapshot. Their `turbo-frame src` attributes
   were stripped, otherwise Turbo re-fetches from the live site, hits the login wall and blanks them.
 - Every other Info-Tech nav link still points at `us.app.cioanalytics.ai`. Only **Metrics** (home)
-  and **Zluri's SaaS Management Platform** stay local.
+  and **Zluri's SaaS Management Platform** (its own SAAS MANAGEMENT section, below Service Desk) stay local.
 - `logo-infotech.jpg` was missing from the saved copy, so the sidebar logo falls back to
   `info-tech-logo-blue-a9dd7c97.svg`.
