@@ -5,6 +5,11 @@ Static prototype of the SSO handoff from Info-Tech's **CIO Analytics** dashboard
 Built from a saved copy of the live Info-Tech page (`reference/`), so the shell, CSS and fonts are
 the real ones. The Zluri screens are rebuilt by hand from `v1-dashboard` — no backend, no login.
 
+## Live
+
+**https://itrg-zl-sso.vercel.app** — deployed from Vercel, rebuilt on every push to `main`.
+Build settings live in `vercel.json`, not the dashboard.
+
 ## Run it
 
 ```bash
