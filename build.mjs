@@ -19,7 +19,8 @@ const PAGES = {
   zluri: {
     title: "Zluri's SaaS Management Platform",
     nav: 'subnav-link-zluri-saas-management',
-    head: CHART_HEAD,
+    // Hide the blue "Service Desk Analytics" title bar on this page only.
+    head: CHART_HEAD + '\n<style>#section-title-bar{display:none}body>header{height:auto}</style>',
   },
   'zluri-onboarding': {
     title: 'Set up Zluri',
