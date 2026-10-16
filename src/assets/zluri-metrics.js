@@ -8,9 +8,18 @@
   var EMBED_HEIGHT = 720;
 
   // app.zluri.dev only lets the Vercel deploy frame it, so local builds frame a local v1-dashboard.
-  var EMBED_SRC = location.hostname === 'localhost'
+  var DEFAULT_EMBED_SRC = location.hostname === 'localhost'
     ? 'http://localhost:4040/mock-itrg-overview?partner=Zluri'
     : 'https://app.zluri.dev/mock-itrg-overview?partner=Zluri';
+
+  // Set `itrg-zluri-embed-url` in localStorage to point the overview iframe somewhere else.
+  function embedSrc() {
+    try {
+      return localStorage.getItem('itrg-zluri-embed-url') || DEFAULT_EMBED_SRC;
+    } catch (e) {
+      return DEFAULT_EMBED_SRC;
+    }
+  }
 
   function fitEmbed(box) {
     if (!box.clientWidth) return;
@@ -45,7 +54,7 @@
     var embed = document.querySelector('.proto-embed');
     if (mode === 'regular' && embed) {
       var frame = embed.querySelector('iframe');
-      if (!frame.getAttribute('src')) frame.setAttribute('src', EMBED_SRC);
+      if (!frame.getAttribute('src')) frame.setAttribute('src', embedSrc());
       fitEmbed(embed);
     }
   }
